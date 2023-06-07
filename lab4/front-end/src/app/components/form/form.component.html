@@ -1,0 +1,85 @@
+<div class="forms">
+  <div class="form">
+    <p>Форма редагування</p>
+    <input type="hidden" [(ngModel)]="currentShampoo.id" />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Назва"
+      aria-label="name"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="currentShampoo.name"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Зображення"
+      aria-label="image"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="currentShampoo.photo"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Рейтинг"
+      aria-label="type"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="currentShampoo.rate"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Ціна"
+      aria-label="description"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="currentShampoo.price"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <button type="button" class="btn btn-danger" (click)="onEdit()">
+      Оновити
+    </button>
+  </div>
+
+  <div class="form">
+    <p>Форма додавання</p>
+    <input type="hidden" [(ngModel)]="currentShampoo.id" />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Назва"
+      aria-label="name"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="newShampoo.name"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Зображення"
+      aria-label="image"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="newShampoo.photo"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Рейтинг"
+      aria-label="type"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="newShampoo.rate"
+    />
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Ціна"
+      aria-label="description"
+      aria-describedby="basic-addon1"
+      [(ngModel)]="newShampoo.price"
+    />
+    <button type="button" class="btn btn-danger" (click)="onAdd()">
+      Додати
+    </button>
+  </div>
+</div>
