@@ -1,0 +1,40 @@
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 50px;
+  .form-control {
+    width: 300px;
+    height: 40px;
+    border: 1.5px solid rgb(46, 130, 130);
+    margin-bottom: 10px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 900;
+  }
+
+  .btn {
+    width: 305px;
+    height: 40px;
+    border: 1.5px solid rgb(46, 130, 130);
+    border-radius: 10px;
+    background-color: rgb(103, 152, 152);
+    cursor: pointer;
+    transition: all 0.5s;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 900;
+    color: rgb(230, 230, 230);
+  }
+  .btn:hover {
+    transform: scale(1.05);
+  }
+}

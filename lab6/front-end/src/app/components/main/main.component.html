@@ -1,0 +1,48 @@
+<div class="main_title">
+  <h2>Наші товари</h2>
+  <h5>
+    Ознайомтесь з наим ассортиментом та приходьте до нас у гості за шампунями
+  </h5>
+</div>
+
+<div class="main_body">
+  <div class="main_content">
+    <div
+      class="main_item"
+      *ngFor="
+        let s of shampooList | paginate : { itemsPerPage: 4, currentPage: page }
+      "
+    >
+      <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+      <div class="img-box">
+        <img src="{{ s.photo }}" alt="" />
+      </div>
+      <div class="thumb-content">
+        <h4>{{ s.name }}</h4>
+        <p class="item-price">
+          <b
+            >{{ s.rate }}
+            <img
+              style="width: 25px"
+              src="https://i.postimg.cc/pXD8tvp5/icons8-star-96-3.png"
+              alt=""
+          /></b>
+        </p>
+        <p class="item-price">
+          <b>{{ s.price }} грн</b>
+        </p>
+      </div>
+      <button class="btn btn-primary" (click)="onDelete(s)">Видалити</button>
+      <button class="btn btn-primary" (click)="choseShampoo(s)">
+        Редагувати
+      </button>
+    </div>
+  </div>
+</div>
+<div class="paginator_container">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="paginator"
+    [hidden]="show"
+  ></pagination-controls>
+</div>
