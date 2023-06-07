@@ -1,0 +1,85 @@
+<div class="form_body">
+  <div *ngIf="currentCar" class="editForm">
+    <h4>Edit Form</h4>
+    <div>
+      <input type="hidden" [(ngModel)]="currentCar.id" />
+      <div class="form-group">
+        <input
+          type="text"
+          [(ngModel)]="currentCar.name"
+          required
+          class="input"
+          placeholder="Name"
+        />
+        <input
+          type="text"
+          [(ngModel)]="currentCar.photo"
+          required
+          class="input"
+          placeholder="Photo"
+        />
+        <input
+          type="number"
+          [(ngModel)]="currentCar.price"
+          required
+          class="input"
+          placeholder="Price"
+        />
+      </div>
+      <button (click)="onUpdate()" class="btn add">Update</button>
+    </div>
+  </div>
+  <div class="addForm">
+    <h4>Add Form</h4>
+    <div class="form-group">
+      <input type="hidden" [(ngModel)]="newCar.id" />
+      <input
+        type="text"
+        placeholder="Name"
+        required
+        class="input"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="newCar.name"
+      />
+      <input
+        type="text"
+        placeholder="Photo"
+        required
+        class="input"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="newCar.photo"
+      />
+      <input
+        type="number"
+        placeholder="Price"
+        required
+        class="input"
+        aria-describedby="basic-addon1"
+        [(ngModel)]="newCar.price"
+      />
+    </div>
+    <button class="btn add" (click)="onAdd()">Save</button>
+  </div>
+</div>
+
+<div class="cars">
+  <div
+    class="main_item"
+    *ngFor="let i of cars | paginate : { itemsPerPage: 4, currentPage: page }"
+  >
+    <img src="{{ i.photo }}" (click)="clickOnCar(i)" />
+    <h4>{{ i.name }}</h4>
+    <div class="card-buy-field">
+      <button value="3" class="btn delete" (click)="deleteCar(i)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
+<div class="paginator_container">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="paginator"
+    [hidden]="show"
+  ></pagination-controls>
+</div>

@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="main_title">
+    <h1>Our Goods</h1>
+    <h2>Best Military Technic</h2>
+  </div>
+  <div class="main_content">
+    <div
+      class="main_item"
+      *ngFor="let i of cars | paginate : { itemsPerPage: 4, currentPage: page }"
+    >
+      <img src="{{ i.photo }}" />
+      <h4>{{ i.name }}</h4>
+      <div class="card-buy-field">
+        <p>{{ i.price }}M$</p>
+        <button value="3" class="buy-button">Buy</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="paginator_container">
+  <pagination-controls
+    (pageChange)="page = $event"
+    class="paginator"
+    [hidden]="show"
+  ></pagination-controls>
+</div>

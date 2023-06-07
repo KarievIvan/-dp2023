@@ -1,0 +1,100 @@
+.form_body {
+  display: flex;
+  flex-wrap: nowrap;
+  .editForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      input {
+        border-radius: 10px;
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+      }
+    }
+  }
+  .addForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      input {
+        border-radius: 10px;
+        width: 200px;
+        height: 30px;
+        margin: 10px;
+      }
+    }
+  }
+
+  .btn {
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgb(30, 57, 66);
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgb(60, 128, 151);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: rgb(30, 57, 66);
+  }
+}
+
+.cars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  .main_item {
+    width: 150px;
+    img {
+      width: 70%;
+    }
+  }
+
+  .btn {
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(30, 57, 66);
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgb(60, 128, 151);
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    background-color: rgb(30, 57, 66);
+  }
+}
+
+.paginator_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
